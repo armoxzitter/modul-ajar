@@ -32,9 +32,9 @@ export default function Home() {
                   ['Tahun Pelajaran', '2025/ 2026'],
                 ].map((row, idx) => (
                   <tr key={row[0]} className={idx % 2 === 1 ? 'bg-slate-50/60' : ''}>
-                    <td className="w-[38%] px-4 py-3 text-sm font-medium text-slate-600">{row[0]}</td>
+                    <td className="w-[38%] px-4 py-3 font-bold text-slate-600" style={{ fontSize: '1rem', letterSpacing: '-0.02rem' }}>{row[0]}</td>
                     <td className="w-[4%] px-2 py-3 text-slate-400">:</td>
-                    <td className="px-4 py-3 text-sm md:text-base text-slate-800">{row[1]}</td>
+                    <td className="px-4 py-3 text-base md:text-lg text-slate-800" style={{ letterSpacing: '-0.02rem' }}>{row[1]}</td>
                   </tr>
                 ))}
               </tbody>
@@ -54,7 +54,7 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h3 className="text-xl md:text-2xl font-semibold text-slate-900">2. IDENTIFIKASI MATA PELAJARAN</h3>
           <p className="mt-4 text-base md:text-lg text-slate-700">
-            Materi "Culinary and Me" mencakup jenis pengetahuan konseptual dan prosedural. Materi ini relevan dengan kehidupan nyata peserta didik karena makanan dan minuman merupakan bagian yang tak terpisahkan dari kehidupan sehari-hari mereka.
+            Materi <span className="font-semibold">"Culinary and Me"</span> mencakup jenis pengetahuan konseptual dan prosedural. Materi ini relevan dengan kehidupan nyata peserta didik karena makanan dan minuman merupakan bagian yang tak terpisahkan dari kehidupan sehari-harinya.
           </p>
         </div>
       </section>
@@ -70,8 +70,8 @@ export default function Home() {
                   ['DPL-3', 'Penalaran Kritis', false],
                   ['DPL-4', 'Kreativitas', true],
                   ['DPL-5', 'Kolaborasi', true],
-                  ['DPL-6', 'Kemandirian', true],
-                  ['DPL-7', 'Kesehatan', false],
+                  ['DPL-6', 'Kemandirian', false],
+                  ['DPL-7', 'Kesehatan', true],
                   ['DPL-8', 'Komunikasi', true],
                 ].map(([code, text, checked], idx) => (
                   <tr key={code as string} className={idx % 2 === 1 ? 'bg-slate-50/60' : ''}>
@@ -92,8 +92,8 @@ export default function Home() {
       <section className="py-6 md:py-10">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h3 className="text-xl md:text-2xl font-semibold text-slate-900">4. CAPAIAN PEMBELAJARAN (CP)</h3>
-          <h4 className="mt-3 text-lg md:text-xl font-semibold text-slate-800">Elemen Menyimak - Berbicara</h4>
-          <p className="mt-2 text-base text-slate-600">Pada akhir Fase D, peserta didik dapat:</p>
+          <p className="mt-4 text-base md:text-lg text-slate-700">Elemen Menyimak - Berbicara</p>
+          <p className="mt-2 text-base md:text-lg text-slate-700">Pada akhir Fase D, peserta didik dapat:</p>
           <ul className="mt-4 list-disc space-y-2 pl-5 text-base md:text-lg text-slate-700">
             <li>Memahami dan merespons teks lisan, tulisan, dan multimodal tentang berbagai topik, termasuk deskripsi makanan dan resep sederhana.</li>
             <li>Berinteraksi dan berkomunikasi menggunakan bahasa Inggris untuk menyampaikan dan meminta informasi tentang makanan dan minuman.</li>
@@ -106,10 +106,8 @@ export default function Home() {
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <h3 className="text-xl md:text-2xl font-semibold text-slate-900">5. LINTAS DISIPLIN ILMU</h3>
           <ul className="mt-4 space-y-3 text-base md:text-lg text-slate-700">
-            <li><span className="font-semibold">Pendidikan Jasmani, Olahraga, dan Kesehatan (PJOK)</span>: Diskusi tentang makanan sehat, nutrisi, dan kaitannya dengan pola hidup sehat.</li>
-            <li><span className="font-semibold">Ilmu Pengetahuan Alam (IPA)</span>: Konsep nutrisi, jenis-jenis makanan, dan proses kimia dalam memasak (misalnya, perubahan wujud bahan makanan).</li>
-            <li><span className="font-semibold">Seni Budaya</span>: Menghargai keindahan presentasi makanan, keragaman kuliner sebagai bagian dari budaya, atau membuat poster/iklan makanan.</li>
-            <li><span className="font-semibold">Ilmu Pengetahuan Sosial (IPS)</span>: Geografi makanan (makanan khas daerah/negara lain), sejarah kuliner, atau dampak sosial ekonomi dari industri makanan.</li>
+            <li>● <span className="font-bold">Ilmu Pengetahuan Alam (IPA):</span> Konsep nutrisi, dan jenis-jenis makanan.</li>
+            <li>● <span className="font-bold">Ilmu Pengetahuan Sosial (IPS):</span> Geografi makanan (makanan khas daerah/negara lain).</li>
           </ul>
         </div>
       </section>
@@ -133,24 +131,24 @@ export default function Home() {
             <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <h5 className="text-base md:text-lg font-semibold text-slate-900">MITRA PEMBELAJARAN</h5>
               <ul className="mt-2 space-y-2 text-base text-slate-700">
-                <li>Lingkungan Sekolah: Teman sejawat</li>
-                <li>Lingkungan Luar Sekolah: Keluarga, pedagang makanan, komunitas kuliner, vlogger/blogger (sebagai inspirasi).</li>
+                <li><span className="font-bold">Lingkungan Sekolah</span>: Teman sejawat</li>
+                <li><span className="font-bold">Lingkungan Luar Sekolah</span>: Keluarga, pedagang makanan, komunitas kuliner, vlogger/blogger (sebagai inspirasi).</li>
               </ul>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm md:col-span-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <h5 className="text-base md:text-lg font-semibold text-slate-900">LINGKUNGAN BELAJAR</h5>
               <ul className="mt-2 space-y-2 text-base text-slate-700">
-                <li>Ruang Fisik: Ruang kelas</li>
-                <li>Ruang Virtual: -</li>
-                <li>Budaya Belajar: Mendorong siswa untuk berani dan percaya diri berbicara bahasa Inggris meskipun masih ada kesalahan, saling membantu dan mengoreksi, serta aktif bertanya. Menciptakan suasana belajar yang menyenangkan, dan bebas dari rasa takut salah.</li>
+                <li><span className="font-bold">Ruang Fisik:</span> Ruang kelas</li>
+                <li><span className="font-bold">Ruang Virtual:</span> -</li>
+                <li><span className="font-bold">Budaya Belajar:</span> Mendorong siswa untuk berani dan percaya diri berbicara bahasa Inggris meskipun masih ada kesalahan, saling membantu dan mengoreksi, serta aktif bertanya. Menciptakan suasana belajar yang menyenangkan, dan bebas dari rasa takut salah.</li>
               </ul>
             </div>
-            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm md:col-span-2">
+            <div className="rounded-xl border border-slate-200 bg-white p-5 shadow-sm">
               <h5 className="text-base md:text-lg font-semibold text-slate-900">PEMANFAATAN DIGITAL</h5>
               <ul className="mt-2 space-y-2 text-base text-slate-700">
-                <li>Perencanaan: PPT</li>
-                <li>Langkah: Rekaman video</li>
-                <li>Asesmen: LKPD</li>
+                <li><span className="font-bold">Perencanaan:</span> PPT</li>
+                <li><span className="font-bold">Langkah:</span> Rekaman video</li>
+                <li><span className="font-bold">Asesmen:</span> LKPD</li>
               </ul>
             </div>
           </div>
@@ -181,15 +179,14 @@ export default function Home() {
             <div>
               <h3 className="italic text-xl md:text-2xl font-semibold text-slate-900">Mengaplikasi</h3>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-base md:text-lg text-slate-700">
-                <li>Presentasi singkat "My Favorite Food" (dengan gambar dan deskripsi).</li>
-                <li>Guru berkeliling, memberikan feedback langsung dan koreksi yang konstruktif. Bagi siswa yang masih kesulitan, guru memberikan contoh kalimat langsung atau mengulang instruksi perlahan. Bagi siswa yang sudah mahir, guru mendorong untuk menggunakan kalimat yang lebih kompleks atau menambahkan detail.</li>
+                <li>Presentasi singkat <span className="font-bold">"My Favorite Food"</span> (dengan gambar dan deskripsi).</li>
+                <li>Guru berkeliling, memberikan <i>feedback</i> langsung dan koreksi yang konstruktif. Bagi siswa yang masih kesulitan, guru memberikan contoh kalimat langsung atau mengulang instruksi perlahan. Bagi siswa yang sudah mahir, guru mendorong untuk menggunakan kalimat yang lebih kompleks atau menambahkan detail.</li>
               </ul>
             </div>
             <div>
               <h3 className="italic text-xl md:text-2xl font-semibold text-slate-900">Merefleksi</h3>
               <ul className="mt-3 list-disc space-y-2 pl-5 text-base md:text-lg text-slate-700">
-                <li>Setiap kelompok menyampaikan hasil diskusinya. Peserta didik lain diberikan kesempatan untuk bertanya atau memberikan komentar positif.</li>
-                <li>Peserta didik menulis di buku catatan mereka tentang: "Tiga kata baru yang saya pelajari hari ini adalah...", "Satu kalimat yang saya senang bisa mengucapkannya dalam bahasa Inggris adalah...", "Bagian mana dari pelajaran ini yang paling saya nikmati?".</li>
+                <li>Peserta didik melakukan refleksi dengan menulis di kertas/buku catatan mereka tentang: "Sejumlah kata baru yang saya pelajari hari ini adalah...", "Satu atau beberapa kalimat yang saya senang bisa mengucapkannya dalam bahasa Inggris adalah...", "Bagian mana dari pelajaran ini yang saya pahami maupun merasa kesulitan?".</li>
               </ul>
             </div>
           </div>
